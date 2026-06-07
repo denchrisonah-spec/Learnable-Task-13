@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Instrument+Sans:wght@400;500;600&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Instrument Sans', sans-serif;
+
+  --bg:        #FAFAF8;
+  --bg-subtle: #F4F3F0;
+  --bg-card:   #FFFFFF;
+  --nav-bg:    rgba(250,250,248,0.92);
+
+  --accent:        #E8452A;
+  --accent-light:  #FEF0ED;
+  --accent-mid:    rgba(232,69,42,0.12);
+
+  --ink:        #1A1814;
+  --ink-mid:    #4A4740;
+  --ink-muted:  #9B9790;
+  --border:     #E8E6E1;
+  --border-mid: #D4D1CB;
+
+  --shadow-sm:  0 1px 3px rgba(26,24,20,0.06);
+  --shadow-md:  0 4px 16px rgba(26,24,20,0.08);
+  --shadow-lg:  0 12px 40px rgba(26,24,20,0.12);
+
+  --btn-view-bg:    #F0EDE8;    --btn-view-fg:    #1A1814;
+  --btn-edit-bg:    #EAF2FF;    --btn-edit-fg:    #1D4ED8;
+  --btn-delete-bg:  #FEF0ED;    --btn-delete-fg:  #E8452A;
+}
+
+html, body { height: 100%; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--ink);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+
+#root { min-height: 100vh; }
+
+/* ── Shared button styles ───────────────────────────── */
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.625rem 1.375rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+  letter-spacing: 0.01em;
+  transition: background 0.15s, transform 0.12s, box-shadow 0.15s;
+  box-shadow: 0 1px 2px rgba(232,69,42,0.25);
+}
+.btn-primary:hover {
+  background: #d43a21;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(232,69,42,0.3);
+}
+.btn-primary:active { transform: translateY(0); }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--ink-mid);
+  border: 1.5px solid var(--border-mid);
+  border-radius: 8px;
+  padding: 0.625rem 1.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: border-color 0.15s, color 0.15s;
+}
+.btn-secondary:hover {
+  color: var(--ink);
+  border-color: var(--ink-mid);
+}
